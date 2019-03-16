@@ -3,6 +3,7 @@ package com.utad.curso.desarrollo.seguro.dto;
 import java.util.List;
 
 import javax.validation.Valid;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -17,6 +18,7 @@ public class DummyRequestBodyDto {
 
     @NotNull
     @Min(0)
+    @Max(10)
     private Long attribute2;
 
     @Valid
