@@ -9,7 +9,7 @@
 <parent>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-parent</artifactId>
-	<version>1.5.9.RELEASE</version>
+	<version>1.5.19.RELEASE</version>
 </parent>
 
 <properties>
@@ -19,6 +19,9 @@
 	<!--  Validation Version -->
 	<javax-validation.version>2.0.1.Final</javax-validation.version>
 		<hibernate-validator.version>6.0.13.Final</hibernate-validator.version>
+		
+	<!-- Jacksin Version -->
+	<jackson.version>2.9.8</jackson.version>
 	
 </properties>
 
@@ -61,6 +64,36 @@
 		<groupId>javax.servlet</groupId>
 		<artifactId>jstl</artifactId>
 	</dependency>
+	
+	<!-- Spring Security -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+        
+		<!-- MySQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		
+		<!-- Spring Boot Data JPA -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<!-- Spring Transaction -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+		</dependency>
+
+		<!-- Spring Object Relational Mapping -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+		</dependency>
 	
 </dependencies>
   

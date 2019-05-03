@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>U-TAD</title>
 </head>
 <body>
-	<h1>Hello ${name} </h1>
+	<h1>Hello ${name}!</h1>
+	<form action="/logout" method="post">
+		<input type="submit" value="Logout"/>
+	</form>
 </body>
 </html>
