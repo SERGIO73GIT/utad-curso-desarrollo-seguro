@@ -2,6 +2,8 @@ package com.utad.curso.desarrollo.seguro.config.security;
 
 import java.util.Arrays;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -19,6 +21,9 @@ public class CustomUserDetailsService
     @Autowired
     private UsersService usersService;
 
+    @Autowired
+    private HttpSession httpSession;
+
     @Override
     public UserDetails loadUserByUsername(
             String username)
@@ -29,6 +34,8 @@ public class CustomUserDetailsService
         if (user == null) {
             throw new UsernameNotFoundException("");
         }
+
+        httpSession.setAttribute("user-id", user.getUserId());
 
         return new org.springframework.security.core.userdetails.User(
                 username,
